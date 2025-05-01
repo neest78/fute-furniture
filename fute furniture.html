@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karakana ya Mashine za Mbao</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #8B4513;
+            color: whitesmoke;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .services, .about, .contact {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .image {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .image timber in the wood {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        h2 {
+            color: #8B4513;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Karakana ya Mashine za Mbao</h1>
+        <p>Ubora na Ufanisi katika Kazi za Useremala</p>
+    </header>
+
+    <section class="about">
+        <h2>Kuhusu Karakana</h2>
+        <p>Karakana yetu ina vifaa vya kisasa vya kuchakata mbao. Tunatengeneza bidhaa kama vile meza, viti, kabati na fremu za madirisha kwa kutumia mashine bora zenye usalama wa hali ya juu.</p>
+    </section>
+
+    <section class="services">
+        <h2>Huduma Zetu</h2>
+        <ul>
+            <li>Kukata mbao kwa mashine</li>
+            <li>Kubuni na kutengeneza fanicha</li>
+            <li>Kuboresha mbao kwa polishing na varnish</li>
+            <li>Kukarabati fanicha za zamani</li>
+        </ul>
+    </section>
+    <section id="gallery">
+  <h2>Gallery ya Bidhaa za Mbao</h2>
+  <p>Ona baadhi ya kazi bora tunazofanya katika karakana yetu:</p>
+
+  <div class="gallery-grid">
+    <img src="https://cdn.pixabay.com/photo/2016/11/29/03/45/door-1869744_960_720.jpg" alt="Mlango wa mbao" onclick="openLightbox(this)">
+    <img src="https://cdn.pixabay.com/photo/2016/11/18/16/23/bed-1839070_960_720.jpg" alt="Kitanda cha mbao" onclick="openLightbox(this)">
+    <img src="https://cdn.pixabay.com/photo/2017/08/30/01/52/chair-2697179_960_720.jpg" alt="Kiti cha mbao" onclick="openLightbox(this)">
+    <img src="https://cdn.pixabay.com/photo/2016/11/29/03/45/table-1869747_960_720.jpg" alt="Meza ya mbao" onclick="openLightbox(this)">
+  </div>
+</section>
+
+<!-- Lightbox container -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="" alt="Gallery Image">
+</div>
+
+    <section id="products">
+    <h2>Bidhaa Zetu</h2>
+    <div class="product">
+        <img src="meza.jpg" alt="Meza ya Mbao">
+        <h3>Meza ya Mbao</h3>
+        <p>Meza imetengenezwa kwa mbao za ubora wa juu.</p>
+        <button onclick="addToCart('Meza ya Mbao')">Ongeza kwenye Oda</button>
+    </div>
+    <div class="product">
+        <img src="kiti.jpg" alt="Kiti cha Mbao">
+        <h3>Kiti cha Mbao</h3>
+        <p>Kiti imara na la kudumu.</p>
+        <button onclick="addToCart('Kiti cha Mbao')">Ongeza kwenye Oda</button>
+    </div>
+     <div class="product">
+        <img src="Mlango.jpg" alt="mlango wa mbao">
+        <h3>Mlango wa Mbao</h3>
+        <p>Mlango imara na wa kudumu.</p>
+        <button onclick="addToCart('Mlango wa Mbao')">Ongeza kwenye Oda</button>
+        </div>
+</section>
+<section id="order-form">
+    <h2>Weka Oda Yako</h2>
+    <form id="orderForm">
+        <label for="name">Jina lako:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="address">Anwani yako:</label>
+        <input type="text" id="address" name="address" required><br><br>
+        <label for="details">Maelezo ya ziada:</label><br>
+        <textarea id="details" name="details"></textarea><br><br>
+        <button type="submit">Tuma Oda</button>
+    </form>
+</section>
+
+  
+
+   
+</section>
+<section id="payment">
+  <h2>Malipo kwa M-Pesa</h2>
+  <p>Jaza maelezo ya oda yako hapa chini. Malipo yanatakiwa kwenda kwa jina <strong>ERNEST</strong>. Namba ya M-Pesa itatumwa kwako baada ya kutuma oda.</p>
+
+  <form action="https://formsubmit.co/youremail@example.com" method="POST" enctype="multipart/form-data">
+    <!-- Hifadhi data salama -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="_subject" value="Oda Mpya Kupitia Website">
+
+    <label for="name">Jina lako:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label for="phone">Namba yako ya simu:</label><br>
+    <input type="tel" name="phone" required><br><br>
+
+    <label for="order">Maelezo ya Oda:</label><br>
+    <textarea name="order" rows="4" required></textarea><br><br>
+
+    <label for="transaction">Namba ya Muamala (M-Pesa):</label><br>
+    <input type="text" name="transaction" required><br><br>
+
+    <label for="receipt">Pakia Screenshot ya Risiti:</label><br>
+    <input type="file" name="receipt" accept="image/*" required><br><br>
+
+    <button type="submit">Tuma Oda</button>
+  </form>
+
+  <p style="margin-top:15px;"><strong>Baada ya kutuma oda, namba ya malipo itatumwa kwenye simu au email yako kwa usalama.</strong></p>
+</section>
+
+
+</section>
+
+
+</section>
+
+
+
+
+    <section class="image">
+        <img src="https://via.placeholder.com/800x400?text=Wood+Workshop" alt="Wood Machine Workshop Image">
+    </section>
+
+    <section class="contact">
+        <h2>Wasiliana Nasi</h2>
+        <p>Simu: +255 747 623 812</p>
+        <p>Email: </p>
+        <p>Anuani: KIWANDA CHA DAE, MBINGA, RUVUMA</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Karakana ya Mashine za Mbao - Haki zote zimehifadhiwa</p>
+    </footer>
+
+</body>
+</html>
